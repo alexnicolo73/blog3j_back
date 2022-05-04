@@ -13,7 +13,7 @@ class Blogpost extends Migration
      */
     public function up()
     {
-        Schema::create('blogpost', function (Blueprint $table) {
+        Schema::create('blog_posts', function (Blueprint $table) {
             $table->id();
             $table->string('title');
             $table->string('contenu');
@@ -33,5 +33,5 @@ class Blogpost extends Migration
         Schema::drop('blogpost');
     }
 
-    
+
 }

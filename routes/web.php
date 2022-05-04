@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BlogPostController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,9 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-Route::get('/addpost', function () {
-    return view('formpost');
-});
+
+Route::get('/', [BlogPostController::class, 'index']);
+
+Route::get('delete/{id}', [BlogPostController::class, 'delete']);
