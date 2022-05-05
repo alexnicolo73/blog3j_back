@@ -71,27 +71,24 @@
             <div id="addEmployeeModal" class="modal fade">
                 <div class="modal-dialog">
                     <div class="modal-content">
-                        <form>
+                        <form action="{{url('addblogpost')}}" method="post">
+                            @csrf
                             <div class="modal-header">
-                                <h4 class="modal-title">Add Employee</h4>
+                                <h4 class="modal-title">Ajouter un post</h4>
                                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                             </div>
                             <div class="modal-body">
                                 <div class="form-group">
                                     <label>Titre</label>
-                                    <input type="Titre" class="form-control" required>
+                                    <input type="text" name="title" class="form-control" required>
                                 </div>
                                 <div class="form-group">
                                     <label>Contenue</label>
-                                    <input type="Contenue" class="form-control" required>
+                                    <input type="text" name="contenu" class="form-control" required>
                                 </div>
                                 <div class="form-group">
                                     <label>Image</label>
-                                    <textarea class="form-control" required></textarea>
-                                </div>
-                                <div class="form-group">
-                                    <label>Id</label>
-                                    <input type="Id" class="form-control" required>
+                                    <input type="text" name="img" class="form-control" required>
                                 </div>
                             </div>
                             <div class="modal-footer">
