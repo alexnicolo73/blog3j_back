@@ -21,3 +21,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::get('getblogarticle', [BlogPostController::class,'getAllBlogArticle']);
+
+Route::get('getarticle/{id}', [BlogPostController::class,'getArticle']);

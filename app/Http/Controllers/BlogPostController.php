@@ -48,4 +48,15 @@ class BlogPostController extends Controller
 
     }
 
+    public function getArticle($id){
+
+        $blogarticle = BlogPost::find($id);
+        
+        return response()->json([
+            'blog_post'=> $blogarticle,
+        ]);
+
+
+    }
+
 }
