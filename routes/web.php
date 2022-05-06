@@ -19,9 +19,5 @@ Route::get('/', 'BlogPostController@index');
 
 Route::get('delete/{id}', [BlogPostController::class, 'delete']);
 
-Route::group(array('https'), function(){
 
-    Route::post('addblogpost', [BlogPostController::class,'add']);
-
-);
-}
+Route::post('addblogpost', [BlogPostController::class,'add']);
